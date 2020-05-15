@@ -99,8 +99,13 @@ function App() {
         <Grid container item xs={12} spacing={5}>
           <FormRow />
         </Grid>
+        <Grid container item xs={12} spacing={5}>
+          <FormRow />
+        </Grid>
+        <Grid container item xs={12} spacing={5}>
+          <FormRow />
+        </Grid>
       </Grid>
-
     </div>
   </div>
 
