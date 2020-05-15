@@ -15,6 +15,16 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import IconButton from '@material-ui/core/IconButton';
 import './App.css';
 
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+
+const drawerWidth = 140;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +34,30 @@ const useStyles = makeStyles((theme) => ({
 
    padding: theme.spacing(2),
    textAlign: 'center',
-   color: theme.palette.text.secondary,
+   color: 'theme.palette.text.secondary',
+   height: 150
  },
+  appBar: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    backgroundColor:'orange',
+
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing(3),
+
+  },
 }));
 
 
@@ -49,13 +81,46 @@ function App() {
     }
 
   return (
-    <div className="App">
-    <div>
-      <header className="App-header">
-        <h2>AppKiDava </h2>
-      </header>
-    </div>
 
+    <div className="App">
+
+    <CssBaseline />
+      <AppBar position="fixed" className={classes.appBar}>
+        <Toolbar>
+          <Typography variant="h6" noWrap>
+            AapKiDavai
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        className={classes.drawer}
+        variant="permanent"
+        classes={{
+          paper: classes.drawerPaper,
+        }}
+        anchor="left"
+      >
+        <div className={classes.toolbar} />
+        <Divider />
+        <List>
+          {['My Account', 'My Order', 'Track Order', 'Vault'].map((text, index) => (
+            <ListItem button key={text}>
+
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <Divider />
+        <List>
+          {['Wallet', 'Basket', 'Wishlist'].map((text, index) => (
+            <ListItem button key={text}>
+
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
+      <div style={{margin:80, marginLeft:150, marginRight:10}} >
       <AppBar position="static" color="default">
         <Tabs
           indicatorColor="primary"
@@ -73,7 +138,8 @@ function App() {
           <Tab label="My order"  />
         </Tabs>
       </AppBar>
-      <div  style={{margin:20}} >
+      </div>
+      <div  style={{marginLeft:150}} >
       <Grid container spacing={2} >
         <Grid container item xs={12} spacing={2}>
           <FormRow />
