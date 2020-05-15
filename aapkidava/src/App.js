@@ -52,7 +52,7 @@ function App() {
     <div className="App">
     <div>
       <header className="App-header">
-        <h5>AppKiDava </h5>
+        <h2>AppKiDava </h2>
       </header>
     </div>
 
@@ -73,36 +73,36 @@ function App() {
           <Tab label="My order"  />
         </Tabs>
       </AppBar>
-      <div >
+      <div  style={{margin:20}} >
       <Grid container spacing={2} >
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
-        <Grid container item xs={12} spacing={5}>
+        <Grid container item xs={12} spacing={2}>
           <FormRow />
         </Grid>
       </Grid>
