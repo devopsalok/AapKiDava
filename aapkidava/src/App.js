@@ -99,6 +99,7 @@ function App() {
           paper: classes.drawerPaper,
         }}
         anchor="left"
+        backgroundColor="blue"
       >
         <div className={classes.toolbar} />
         <Divider />
